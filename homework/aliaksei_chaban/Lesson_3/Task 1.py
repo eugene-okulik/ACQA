@@ -1,13 +1,17 @@
 # Даны 2 числа a и b. Получить их сумму, разность и произведение
 
+
 def sum_of_variables(a, b):
     return a + b
+
 
 def difference_of_variables(a, b):
     return a - b
 
+
 def product_of_variables(a, b):
     return a * b
+
 
 first_value = 7
 second_value = 4
