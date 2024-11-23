@@ -10,6 +10,7 @@ second_result = 'результат операции: 514'
 third_result = 'результат работы программы: 9'
 add_to_result = 10
 
+
 def increase_result(text, plus_value):
     text_semicolon_index = text.index(':')
     value_index = text_semicolon_index + 2
