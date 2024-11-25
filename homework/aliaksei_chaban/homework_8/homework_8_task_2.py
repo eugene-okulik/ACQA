@@ -23,4 +23,4 @@ for num in fibonacci_generator():
     elif count == 100000:
         print(num)
         break
-    count +=1
+    count += 1
