@@ -13,5 +13,6 @@ def my_first_decorator(func):
 def func_with_decorator(text):
     print(text)
 
+
 my_text = 'Выполнение функции ...'
 func_with_decorator(my_text)

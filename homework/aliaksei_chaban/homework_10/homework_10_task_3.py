@@ -30,6 +30,7 @@ def calc(first, second, operation):
     elif operation == '*':
         return first * second
 
+
 first_value = int(input('Введите первое целое число: '))
 second_value = int(input('Введите второе целое число: '))
 
