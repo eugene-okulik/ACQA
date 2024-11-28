@@ -3,14 +3,12 @@ class Book:
     page_material = 'Бумага'
     is_text_present = True
 
-
     def __init__(self, book_name, author, pages_count, isbn, is_taken=False):
         self.book_name = book_name
         self.author = author
         self.pages_count = pages_count
         self.isbn = isbn
         self.is_taken = is_taken
-
 
     def book_info(self):
         if not self.is_taken:
@@ -37,7 +35,6 @@ class Textbook(Book):
         self.subject = subject
         self.school_class = school_class
         self.homework = homework
-
 
     def book_info(self):
         if not self.is_taken:
