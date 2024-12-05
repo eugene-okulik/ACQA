@@ -1,8 +1,13 @@
-INSERT INTO students (name, second_name, group_id) values ('Aleks', 'Chewbba', 2318);
-INSERT INTO `groups` (title, start_date, end_date) values ('Software tester', 'nov 2024', 'feb 2023');
+INSERT INTO students (name, second_name, group_id) values ('Aleks', 'Chewbba', NULL);
+
 INSERT INTO books (title, taken_by_student_id) values ('How to become a AQA', 3671);
 INSERT INTO books (title, taken_by_student_id) values ('CI and CD', 3671);
 INSERT INTO books (title, taken_by_student_id) values ('What is Kanban', 3671);
+
+INSERT INTO `groups` (title, start_date, end_date) values ('Software tester', 'nov 2024', 'feb 2023');
+UPDATE students SET group_id = 2318 WHERE id = 3671;
+
+
 INSERT INTO subjets (title) values ('Python core');
 INSERT INTO subjets (title) values ('Functional testing');
 INSERT INTO lessons (title, subject_id) values ('Lesson-1', 3534);
