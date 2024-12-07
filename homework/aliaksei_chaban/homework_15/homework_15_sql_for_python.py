@@ -91,12 +91,12 @@ print("Книги студента:", books)
 
 # Для вашего студента выведите всё, что о нем есть в базе: группа, книги, оценки с названиями занятий и предметов
 cursor.execute(
-    '''SELECT * 
+    '''SELECT *
     FROM students
     JOIN books ON students.id = books.taken_by_student_id
     JOIN `groups` g ON students.group_id = g.id
     JOIN marks ON students.id = marks.student_id
-    where students.id = %s;
+    WHERE students.id = %s;
     ''', (new_student_id,)
 )
 
