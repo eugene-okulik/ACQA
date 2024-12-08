@@ -17,13 +17,13 @@ cursor = db.cursor(dictionary=True)
 
 cursor.execute(
     '''
-    SELECT 
-        students.name, 
-        students.second_name, 
-        g.title AS group_title, 
-        COALESCE(books.title, '') AS book_title, 
-        COALESCE(subjets.title, '') AS subject_title, 
-        COALESCE(lessons.title, '') AS lesson_title, 
+    SELECT
+        students.name,
+        students.second_name,
+        g.title AS group_title,
+        COALESCE(books.title, '') AS book_title,
+        COALESCE(subjets.title, '') AS subject_title,
+        COALESCE(lessons.title, '') AS lesson_title,
         COALESCE(marks.value, '') AS mark_value
     FROM students
     LEFT JOIN `groups` g ON students.group_id = g.id
