@@ -17,8 +17,8 @@ cursor = db.cursor(dictionary=True)
 
 cursor.execute(
     '''
-    SELECT students.name, students.second_name, `g`.title AS group_title, books.title AS book_title, 
-              subjets.title AS subject_title, lessons.title AS lesson_title, marks.value AS mark_value
+    SELECT students.name, students.second_name, `g`.title AS group_title, books.title AS book_title,
+    subjets.title AS subject_title, lessons.title AS lesson_title, marks.value AS mark_value
        FROM students
        JOIN books ON students.id = books.taken_by_student_id
        JOIN `groups` g ON students.group_id = g.id
