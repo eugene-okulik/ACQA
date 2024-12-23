@@ -5,7 +5,6 @@ from endpoints.get_object import GetObject
 from endpoints.delete_object import DeleteObject
 
 
-
 @pytest.fixture()
 def create_object_endpoint():
     return CreateObject()
