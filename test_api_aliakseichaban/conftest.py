@@ -1,5 +1,4 @@
 import pytest
-import requests
 from endpoints.create_object import CreateObject
 from endpoints.update_object import UpdateObject, UpdateObjectParameter
 from endpoints.get_object import GetObject
@@ -32,17 +31,17 @@ def delete_object_endpoint():
 
 
 @pytest.fixture()
-def new_object_id():
+def new_object_id(create_object_endpoint, delete_object_endpoint):
     body = {
         "name": "AC_TEST",
         "data": {
             "info": "Some text here"
         }
     }
-    headers = {'Content-Type': 'application/json'}
-    response = requests.post('http://167.172.172.115:52353/object', json=body, headers=headers)
-    object_id = response.json()['id']
+
+    create_object_endpoint.new_object(body=body)
+    object_id = create_object_endpoint.json['id']
 
     yield object_id
 
-    requests.delete(f'http://167.172.172.115:52353/object/{object_id}')
+    delete_object_endpoint.delete_object(object_id)

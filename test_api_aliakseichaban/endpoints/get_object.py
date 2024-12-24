@@ -5,18 +5,17 @@ from endpoints.endpoint import Endpoint
 
 class GetObject(Endpoint):
 
+    def get_request_helper(self, new_object_id):
+        self.response = requests.get(
+            f'{self.url}/{new_object_id}'
+        )
+
     @allure.step('Get the object')
     def get_object(self, new_object_id):
-        self.response = requests.get(
-            f'{self.url}/{new_object_id}'
-        )
-        self.json = self.response.json()
+        self.get_request_helper(new_object_id)
         return self.response
 
-    @allure.step('Check status code is 404')
+    @allure.step('Get removed object. Check status code is 404')
     def get_check_status_code_is_404(self, new_object_id):
-        self.response = requests.get(
-            f'{self.url}/{new_object_id}'
-        )
-
-        assert self.response.status_code == 404, "Wrong status code. 404 is expected"
+        self.get_request_helper(new_object_id)
+        self.check_status_code(404)
