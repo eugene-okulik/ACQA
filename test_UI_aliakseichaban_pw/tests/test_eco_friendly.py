@@ -5,6 +5,7 @@ def test_sort_by_price_desc_direction(eco_friendly_page):
     eco_friendly_page.set_descending_direction()
     eco_friendly_page.check_sorting_by_price_desc()
 
+
 def test_add_to_cart_confirmation_message(eco_friendly_page):
     eco_friendly_page.open_page()
     eco_friendly_page.decline_privacy_policy()
