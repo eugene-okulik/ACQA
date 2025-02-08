@@ -17,10 +17,8 @@ class SalePage(BasePage):
         element = self.find_element(loc.sale_in_navigation_section_loc)
         expect(element).to_have_class(re.compile(r".*\bactive\b.*"))
 
-
     def check_sale_page_title(self, sale_page_name):
         self.wait_for_text_in_element(loc.sale_title_loc, sale_page_name), "The wrong page title"
-
 
     def open_privacy_policy(self):
         self.click(loc.privacy_btn_loc)
