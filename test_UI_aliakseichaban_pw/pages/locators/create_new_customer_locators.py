@@ -1,0 +1,12 @@
+f_name_field_loc = "//input[@id='firstname']"
+l_name_field_loc = "//input[@id='lastname']"
+address_field_loc = "//input[@id='email_address']"
+pwd_field_loc = "//input[@id='password']"
+pwd_confirmation_field_loc = "//input[@id='password-confirmation']"
+
+f_name_field_error_loc = "//div[@id='firstname-error']"
+l_name_field_error_loc = "//div[@id='lastname-error']"
+address_field_error_loc = "//div[@id='email_address-error']"
+pwd_field_error_loc = "//div[@id='password-error']"
+pwd_confirmation_field_error_loc = "//div[@id='password-confirmation-error']"
+create_btn_loc = "//button[@title='Create an Account']"
