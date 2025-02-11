@@ -1,0 +1,23 @@
+Задание 2
+
+Go to first line in file: g
+Go to last line in file: G
+Forward one window: f  ^F  ^V  SPACE
+Forward one line: e  ^E  j  ^N  CR
+Backward one line: y  ^Y  k  ^K  ^P
+Search forward for matching line: /pattern
+Search backward for matching line: ?pattern
+Repeat previous search: n
+Repeat previous search in reverse direction: N
+
+Задание 3
+
+/dev/null = c character special file
+/dev/zero = c character special file
+/dev/sda = No such file or directory
+/dev/tty = c character special file
+/root = d directory
+/etc/passwd = - regular file
+/proc/mounts = l symbolic link
+/bin/ls = - regular file
+/bin/zcat = - regular file
